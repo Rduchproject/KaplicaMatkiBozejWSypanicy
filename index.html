@@ -11,6 +11,13 @@ body {
   margin: 0;
   background: #f4f4f4;
   color: #222;
+  transition: 0.3s;
+}
+
+/* TRYB CIEMNY */
+body.dark {
+  background: #121212;
+  color: #f1f1f1;
 }
 
 header {
@@ -22,12 +29,6 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 38px;
-}
-
-header p {
-  margin-top: 10px;
-  font-size: 18px;
 }
 
 nav {
@@ -58,9 +59,16 @@ nav button {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+body.dark .card {
+  background: #1e1e1e;
+}
+
 .card h2 {
-  margin-top: 0;
   color: #1f3a5f;
+}
+
+body.dark .card h2 {
+  color: #8fb7ff;
 }
 
 .parafia {
@@ -69,10 +77,16 @@ nav button {
   margin-bottom: 15px;
   background: #fafafa;
   border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.parafia strong {
-  font-size: 18px;
+.parafia:hover {
+  transform: scale(1.01);
+}
+
+body.dark .parafia {
+  background: #2a2a2a;
 }
 
 .separator {
@@ -89,6 +103,36 @@ footer {
   background: #1f3a5f;
   color: white;
 }
+
+.hidden {
+  display: none;
+}
+
+.backBtn {
+  background: #1f3a5f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* PRZYCISK TRYBU CIEMNEGO */
+#darkModeBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  background: #1f3a5f;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
 </style>
 </head>
 
@@ -97,40 +141,94 @@ footer {
 <header>
   <h1>Diecezja Kaliska</h1>
   <p>Oficjalna strona diecezjalna</p>
+  <p><strong>Biskup Ordynariusz:</strong> Biskup Stefan Wielgomek</p>
 </header>
 
 <nav>
-  <button>Parafie Diecezji</button>
+  <button onclick="showMain()">Parafie Diecezji</button>
 </nav>
 
 <div class="container">
 
-<div class="card">
+<!-- STRONA GŁÓWNA -->
+<div id="mainPage" class="card">
 
 <h2>Parafie należące do Diecezji Kaliskiej</h2>
 
-<div class="parafia">
+<div class="parafia" onclick="openPage('braciejowka')">
   <strong>Parafia Pod Wezwaniem Trójcy Świętej w Braciejówce</strong><br/>
   Ks. Prob. Józef Zawitowicz
 </div>
 
-<div class="parafia">
+<div class="parafia" onclick="openPage('kryniczka')">
   <strong>Kaplica Pod Wezwaniem Matki Bożej Królowej Polski w Kryniczce</strong><br/>
   Ks. Prob. Marek Popiełuszko
 </div>
 
-<div class="parafia">
+<div class="parafia" onclick="openPage('sypanica')">
   <strong>Kaplica Biskupia Pod Wezwaniem Matki Bożej Królowej Polski w Sypanicy</strong><br/>
   Opiekun: Ks. Marek Popiełuszko
 </div>
 
 <div class="separator"></div>
 
-<div class="parafia">
+<div class="parafia" onclick="openPage('katedra')">
   <strong>Parafia Katedralna</strong><br/>
   Ks. Prob. Grzegorz Wala
 </div>
 
+</div>
+
+<!-- PODSTRONA BRACIEJÓWKA -->
+<div id="braciejowka" class="card hidden">
+  <button class="backBtn" onclick="showMain()">← Powrót</button>
+
+  <h2>Parafia Pod Wezwaniem Trójcy Świętej w Braciejówce</h2>
+
+  <p><strong>Proboszcz:</strong> Ks. Józef Zawitowicz</p>
+
+  <p>
+    Parafia należąca do Diecezji Kaliskiej.
+  </p>
+</div>
+
+<!-- PODSTRONA KRYNICZKA -->
+<div id="kryniczka" class="card hidden">
+  <button class="backBtn" onclick="showMain()">← Powrót</button>
+
+  <h2>Kaplica Pod Wezwaniem Matki Bożej Królowej Polski w Kryniczce</h2>
+
+  <p><strong>Proboszcz:</strong> Ks. Marek Popiełuszko</p>
+
+  <p>
+    Kaplica należąca do Diecezji Kaliskiej.
+  </p>
+</div>
+
+<!-- PODSTRONA SYPANICA -->
+<div id="sypanica" class="card hidden">
+  <button class="backBtn" onclick="showMain()">← Powrót</button>
+
+  <h2>Kaplica Biskupia Pod Wezwaniem Matki Bożej Królowej Polski w Sypanicy</h2>
+
+  <p><strong>Opiekun:</strong> Ks. Marek Popiełuszko</p>
+
+  <p>
+    Kaplica biskupia Diecezji Kaliskiej.
+  </p>
+</div>
+
+<!-- PODSTRONA KATEDRA -->
+<div id="katedra" class="card hidden">
+  <button class="backBtn" onclick="showMain()">← Powrót</button>
+
+  <h2>Parafia Katedralna</h2>
+
+  <p><strong>Proboszcz:</strong> Ks. Grzegorz Wala</p>
+
+  <p>
+    Główna parafia katedralna Diecezji Kaliskiej.
+  </p>
 </div>
 
 </div>
@@ -138,6 +236,39 @@ footer {
 <footer>
   Diecezja Kaliska © 2026
 </footer>
+
+<!-- PRZYCISK CIEMNEGO TRYBU -->
+<button id="darkModeBtn" onclick="toggleDarkMode()">🌙</button>
+
+<script>
+function openPage(id) {
+
+  document.getElementById('mainPage').classList.add('hidden');
+
+  document.querySelectorAll('.container .card').forEach(el => {
+    if(el.id !== 'mainPage') {
+      el.classList.add('hidden');
+    }
+  });
+
+  document.getElementById(id).classList.remove('hidden');
+}
+
+function showMain() {
+
+  document.getElementById('mainPage').classList.remove('hidden');
+
+  document.querySelectorAll('.container .card').forEach(el => {
+    if(el.id !== 'mainPage') {
+      el.classList.add('hidden');
+    }
+  });
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle('dark');
+}
+</script>
 
 </body>
 </html>
