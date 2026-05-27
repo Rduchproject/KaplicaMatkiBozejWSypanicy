@@ -1,14 +1,9 @@
-# Strona Kaplicy Matki Bożej Królowej Polski
-
-## Aktualny skrypt HTML
-
-```html
 <!DOCTYPE html>
 <html lang="pl">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Kaplica Matki Bożej Królowej Polski</title>
+<title>Diecezja Kaliska</title>
 
 <style>
 body {
@@ -22,56 +17,77 @@ header {
   background: #1f3a5f;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 38px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 nav {
   background: #2c4f7c;
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 12px;
 }
 
 nav button {
   background: none;
   border: none;
   color: white;
-  font-size: 16px;
+  font-size: 17px;
   cursor: pointer;
 }
 
 .container {
-  max-width: 900px;
-  margin: 20px auto;
+  max-width: 1000px;
+  margin: 25px auto;
   padding: 10px;
 }
 
 .card {
   background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.announcement {
-  border-left: 4px solid #1f3a5f;
-  padding: 10px;
-  margin-bottom: 10px;
+.card h2 {
+  margin-top: 0;
+  color: #1f3a5f;
+}
+
+.parafia {
+  border-left: 5px solid #1f3a5f;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: #fafafa;
+  border-radius: 6px;
+}
+
+.parafia strong {
+  font-size: 18px;
 }
 
 .separator {
   height: 2px;
   background: #1f3a5f;
-  margin: 15px 0;
-  opacity: 0.4;
+  opacity: 0.3;
+  margin: 20px 0;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  margin-top: 20px;
-  color: #666;
-  font-size: 14px;
+  margin-top: 30px;
+  background: #1f3a5f;
+  color: white;
 }
 </style>
 </head>
@@ -79,64 +95,49 @@ footer {
 <body>
 
 <header>
-  <h1>Kaplica Matki Bożej Królowej Polski</h1>
-  <p>Kaplica Biskupia</p>
+  <h1>Diecezja Kaliska</h1>
+  <p>Oficjalna strona diecezjalna</p>
 </header>
 
 <nav>
-  <button>Ogłoszenia</button>
+  <button>Parafie Diecezji</button>
 </nav>
 
 <div class="container">
 
 <div class="card">
 
-  <h2>Ogłoszenia</h2>
+<h2>Parafie należące do Diecezji Kaliskiej</h2>
 
-  <div class="announcement">
-    <strong>27 maja 2026</strong><br/>
-    Msza Święta o godzinie 18:00 w intencji parafian.
-  </div>
+<div class="parafia">
+  <strong>Parafia Pod Wezwaniem Trójcy Świętej w Braciejówce</strong><br/>
+  Ks. Prob. Józef Zawitowicz
+</div>
 
-  <div class="announcement">
-    <strong>25 maja 2026</strong><br/>
-    Nabożeństwo majowe codziennie po Mszy wieczornej.
-  </div>
+<div class="parafia">
+  <strong>Kaplica Pod Wezwaniem Matki Bożej Królowej Polski w Kryniczce</strong><br/>
+  Ks. Prob. Marek Popiełuszko
+</div>
 
-  <div class="separator"></div>
+<div class="parafia">
+  <strong>Kaplica Biskupia Pod Wezwaniem Matki Bożej Królowej Polski w Sypanicy</strong><br/>
+  Opiekun: Ks. Marek Popiełuszko
+</div>
 
-  <div class="announcement">
-    <strong>Informacje stałe</strong><br/>
-    Kaplica pozostaje otwarta codziennie w godzinach 8:00–20:00.
-  </div>
+<div class="separator"></div>
+
+<div class="parafia">
+  <strong>Parafia Katedralna</strong><br/>
+  Ks. Prob. Grzegorz Wala
+</div>
 
 </div>
 
 </div>
 
 <footer>
-  Kaplica Matki Bożej Królowej Polski
+  Diecezja Kaliska © 2026
 </footer>
 
 </body>
 </html>
-```
-
----
-
-## Plan zmian
-
-Tutaj będziemy dodawać kolejne funkcje i poprawki strony.
-
-Możliwe zmiany:
-
-* nowe sekcje
-* harmonogram Mszy
-* transmisja online
-* lepszy wygląd
-* responsywność na telefon
-* animacje
-* herb / logo kaplicy
-* panel aktualności
-* kalendarz wydarzeń
-* ciemny motyw
