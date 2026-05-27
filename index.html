@@ -118,7 +118,6 @@ footer {
   margin-bottom: 15px;
 }
 
-/* PRZYCISK TRYBU CIEMNEGO */
 #darkModeBtn {
   position: fixed;
   right: 20px;
@@ -132,6 +131,18 @@ footer {
   font-size: 22px;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.announcement {
+  border-left: 4px solid #1f3a5f;
+  padding: 10px;
+  margin-top: 10px;
+  background: #f7f7f7;
+  border-radius: 6px;
+}
+
+body.dark .announcement {
+  background: #2a2a2a;
 }
 </style>
 </head>
@@ -179,56 +190,100 @@ footer {
 
 </div>
 
-<!-- PODSTRONA BRACIEJÓWKA -->
+<!-- BRACIEJÓWKA -->
 <div id="braciejowka" class="card hidden">
-  <button class="backBtn" onclick="showMain()">← Powrót</button>
 
-  <h2>Parafia Pod Wezwaniem Trójcy Świętej w Braciejówce</h2>
+<button class="backBtn" onclick="showMain()">← Powrót</button>
 
-  <p><strong>Proboszcz:</strong> Ks. Józef Zawitowicz</p>
+<h2>Parafia Pod Wezwaniem Trójcy Świętej w Braciejówce</h2>
 
-  <p>
-    Parafia należąca do Diecezji Kaliskiej.
-  </p>
+<p><strong>Proboszcz:</strong> Ks. Józef Zawitowicz</p>
+
+<h3>Ogłoszenia Parafialne</h3>
+
+<!-- TU WPISUJ OGŁOSZENIA -->
+<div class="announcement">
+  <strong>27 maja 2026</strong><br/>
+  Msza Święta o godzinie 18:00.
 </div>
 
-<!-- PODSTRONA KRYNICZKA -->
+<div class="announcement">
+  <strong>Informacja</strong><br/>
+  Kancelaria czynna codziennie po Mszy Świętej.
+</div>
+
+</div>
+
+<!-- KRYNICZKA -->
 <div id="kryniczka" class="card hidden">
-  <button class="backBtn" onclick="showMain()">← Powrót</button>
 
-  <h2>Kaplica Pod Wezwaniem Matki Bożej Królowej Polski w Kryniczce</h2>
+<button class="backBtn" onclick="showMain()">← Powrót</button>
 
-  <p><strong>Proboszcz:</strong> Ks. Marek Popiełuszko</p>
+<h2>Kaplica Pod Wezwaniem Matki Bożej Królowej Polski w Kryniczce</h2>
 
-  <p>
-    Kaplica należąca do Diecezji Kaliskiej.
-  </p>
+<p><strong>Proboszcz:</strong> Ks. Marek Popiełuszko</p>
+
+<h3>Ogłoszenia Kaplicy</h3>
+
+<!-- TU WPISUJ OGŁOSZENIA -->
+<div class="announcement">
+  <strong>26 maja 2026</strong><br/>
+  Nabożeństwo majowe po Mszy wieczornej.
 </div>
 
-<!-- PODSTRONA SYPANICA -->
+<div class="announcement">
+  <strong>Informacja</strong><br/>
+  Kaplica otwarta codziennie 8:00–20:00.
+</div>
+
+</div>
+
+<!-- SYPANICA -->
 <div id="sypanica" class="card hidden">
-  <button class="backBtn" onclick="showMain()">← Powrót</button>
 
-  <h2>Kaplica Biskupia Pod Wezwaniem Matki Bożej Królowej Polski w Sypanicy</h2>
+<button class="backBtn" onclick="showMain()">← Powrót</button>
 
-  <p><strong>Opiekun:</strong> Ks. Marek Popiełuszko</p>
+<h2>Kaplica Biskupia Pod Wezwaniem Matki Bożej Królowej Polski w Sypanicy</h2>
 
-  <p>
-    Kaplica biskupia Diecezji Kaliskiej.
-  </p>
+<p><strong>Opiekun:</strong> Ks. Marek Popiełuszko</p>
+
+<h3>Ogłoszenia Kaplicy Biskupiej</h3>
+
+<!-- TU WPISUJ OGŁOSZENIA -->
+<div class="announcement">
+  <strong>25 maja 2026</strong><br/>
+  Msza Święta biskupia w niedzielę o 12:00.
 </div>
 
-<!-- PODSTRONA KATEDRA -->
+<div class="announcement">
+  <strong>Informacja</strong><br/>
+  Spowiedź przed każdą Mszą Świętą.
+</div>
+
+</div>
+
+<!-- KATEDRA -->
 <div id="katedra" class="card hidden">
-  <button class="backBtn" onclick="showMain()">← Powrót</button>
 
-  <h2>Parafia Katedralna</h2>
+<button class="backBtn" onclick="showMain()">← Powrót</button>
 
-  <p><strong>Proboszcz:</strong> Ks. Grzegorz Wala</p>
+<h2>Parafia Katedralna</h2>
 
-  <p>
-    Główna parafia katedralna Diecezji Kaliskiej.
-  </p>
+<p><strong>Proboszcz:</strong> Ks. Grzegorz Wala</p>
+
+<h3>Ogłoszenia Katedralne</h3>
+
+<!-- TU WPISUJ OGŁOSZENIA -->
+<div class="announcement">
+  <strong>24 maja 2026</strong><br/>
+  Uroczysta suma o godzinie 11:00.
+</div>
+
+<div class="announcement">
+  <strong>Informacja</strong><br/>
+  Adoracja Najświętszego Sakramentu w piątki.
+</div>
+
 </div>
 
 </div>
@@ -237,7 +292,7 @@ footer {
   Diecezja Kaliska © 2026
 </footer>
 
-<!-- PRZYCISK CIEMNEGO TRYBU -->
+<!-- PRZYCISK TRYBU CIEMNEGO -->
 <button id="darkModeBtn" onclick="toggleDarkMode()">🌙</button>
 
 <script>
